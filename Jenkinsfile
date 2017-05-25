@@ -62,7 +62,7 @@ if (cause.equals("Pull Request")){
     }
     // should exit if failed
     // do CI --> this should be from a shared library
-    new CI().run()
+    //new CI().run()
 
 }
 
