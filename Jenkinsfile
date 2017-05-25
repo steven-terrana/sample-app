@@ -1,4 +1,4 @@
-import gsa.pipeline.*
+import gsa.pipeline.clients.*
 
 // define clients
 github  = new GitHub()
