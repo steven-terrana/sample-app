@@ -8,6 +8,7 @@ node {
     returnStdout: true
   ).trim() - '.git'
 
+  echo "org repo: ${org_repo}"
   env.ORG_NAME = org_repo.split("/").getAt(-2)
   env.REPO_NAME = org_repo.split("/").getAt(-1)
   
