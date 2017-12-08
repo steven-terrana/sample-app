@@ -1,13 +1,6 @@
 
 node {  
   checkout scm
- 
-  library identifier: "steven-terrana@master", retriever: modernSCM([
-    $class: 'GitSCMSource',
-    remote: "${sh(script: "git remote get-url origin", returnStdout: true).trim()}",
-    credentialsId: 'github'
-  ])
-  
-  test()
+  println pipeline_config()
 
 }
