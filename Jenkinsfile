@@ -6,7 +6,7 @@ node {
     sh 'echo "adding line to readme from jenkins" >> README.md'
     git_url = sh(script: "git remote get-url origin", returnStdout: true).trim() - 'https://'
     sh 'git commit -am "adding a line to the readme from jenkins"'
-    sh "git push https://${USER}:${PAT}@${git_url}"
+    sh "git push https://${USER}:${PAT}@${git_url} HEAD:master"
   }
 
   
