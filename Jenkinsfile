@@ -1,8 +1,11 @@
 node {  
-  checkout scm
-  sh 'echo "adding line to readme from jenkins" >> README.md' 
-  git_url = sh script: "git remote get-url origin", returnStdout: true
-  echo git_url
-  echo git_url - "https://" 
-  sh 'git add README.md && git commit -m "updaing readme from jenkins" && git push' 
+  checkout scm  
+  withCredentials([usernamePassword(credentialsId: 'github', passwordVariable: 'PAT', usernameVariable: 'USER')]) {
+    sh 'echo "adding line to readme from jenkins" >> README.md'
+    git_url = sh script: "git remote get-url origin", returnStdout: true
+    sh 'git commit -am "adding a line to the readme from jenkins"'
+    sh 'git push https://${USER}:${PAT}@${git_url - "https://"}"
+  }
+
+  
 }
