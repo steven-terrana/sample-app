@@ -1,6 +1,6 @@
 app_environments: 
 - dev:
-    fields: 
+    - fields: 
     - short_name:
         type: String
         value: dev
@@ -14,7 +14,7 @@ app_environments:
         type: Int
         value: 6
 - test
-    fields: 
+    - fields: 
     - short_name:
         type: String
         value: test
@@ -28,7 +28,7 @@ app_environments:
         type: Int
         value: 2
 - staging
-    fields: 
+    - fields: 
     - short_name:
         type: String
         value: staging
