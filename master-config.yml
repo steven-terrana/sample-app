@@ -1,43 +1,17 @@
 app_environments: 
-- dev:
-    - fields: 
-    - short_name:
+  - name: dev
+    fields: 
+      - name: short_name
         type: String
         value: dev
-    - long_name:
+      - name: long_name
         type: String
-        value: Development   
-    - ask_approval:
-        type: Boolean
-        value: true
-    - number_bananas:
-        type: Int
-        value: 6
-- test
-    - fields: 
-    - short_name:
+        value: Development
+  - name: test
+    fields: 
+      - name: short_name
         type: String
         value: test
-    - long_name:
+      - name: long_name
         type: String
-        value: Test   
-    - ask_approval:
-        type: Boolean
-        value: false
-    - number_bananas:
-        type: Int
-        value: 2
-- staging
-    - fields: 
-    - short_name:
-        type: String
-        value: staging
-    - long_name:
-        type: String
-        value: Staging
-    - ask_approval:
-        type: Boolean
-        value: false
-    - number_bananas:
-        type: Int
-        value: 100
+        value: Test    
