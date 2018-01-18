@@ -7,6 +7,12 @@ app_environments:
       - name: long_name
         type: String
         value: Development
+      - name: ask_approval
+        type: Boolean
+        value: true
+      - name: number_bananas
+        type: Int
+        value: 6
   - name: test
     fields: 
       - name: short_name
@@ -14,4 +20,24 @@ app_environments:
         value: test
       - name: long_name
         type: String
-        value: Test    
+        value: Test
+      - name: ask_approval
+        type: Boolean
+        value: false
+      - name: number_bananas
+        type: Int
+        value: 7
+  - name: Staging
+    fields: 
+      - name: short_name
+        type: String
+        value: staging
+      - name: long_name
+        type: String
+        value: Staging
+      - name: ask_approval
+        type: Boolean
+        value: true
+      - name: number_bananas
+        type: Int
+        value: 100
