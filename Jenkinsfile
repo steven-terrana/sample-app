@@ -1,6 +1,6 @@
 node {  
   checkout scm
-  create_app_envs()
+  pipeline_config.load()
   
-  //println dev
+  println pipeline_config()
 }
