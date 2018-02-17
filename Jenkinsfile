@@ -14,4 +14,6 @@ node {
   println "ENVIRONMENT: ${dev.long_name}"
   println "NUMBER BANANAS: ${dev.number_bananas}"
   
+  test()
+  
 }
