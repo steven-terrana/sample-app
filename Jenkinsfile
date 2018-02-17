@@ -7,6 +7,7 @@ node {
     this.getBinding().setVariable(app_env.getKey(), app_env.getValue())
   }
   
-  println dev
+  println "ENVIRONMENT: ${dev.long_name}"
+  println "NUMBER BANANAS: ${dev.number_bananas}"
   
 }
