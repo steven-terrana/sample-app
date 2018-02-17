@@ -14,4 +14,7 @@ node {
   
   mystep()
   
+  this.getBinding().setVariable("mystep", {})
+  
+  mystep()
 }
