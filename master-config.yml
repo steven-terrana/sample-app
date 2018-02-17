@@ -1,6 +1,5 @@
 environments: 
-  - name: dev
-    fields: 
+  - dev:
       short_name: dev
       long_name: Development
       ask_approval: true
