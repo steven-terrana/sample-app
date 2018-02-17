@@ -1,6 +1,7 @@
 node {  
   checkout scm
-  pipeline_config.load()
   
-  println pipeline_config()
+  def config = readYaml file: "master-config.yml"
+  println config
+  
 }
