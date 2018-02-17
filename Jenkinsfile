@@ -4,7 +4,9 @@ node {
   master_config = readYaml file: "master-config.yml"
   
   master_config.environments.each{ app_env ->
-    this.getBinding().setVariable(app_env.getKey(), app_env.getValue())
+    def name = app_env.getKey()
+    def props = app_env.getValue() as HashMap
+    this.getBinding().setVariable(name, props.asImmutable())
   }
   
   println "ENVIRONMENT: ${dev.long_name}"
