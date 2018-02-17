@@ -6,7 +6,7 @@ node {
   master_config.environments.each{ app_env ->
     println app_env
     println app_env.getKey()
-    println app_env.getValue()
+    println app_env.getValue().class
   }
   
 }
