@@ -4,4 +4,9 @@ environments:
     long_name: Development
     ask_approval: true
     number_bananas: 6
+  test:
+    short_name: test
+    long_name: Test
+    ask_approval: true
+    number_bananas: 0
 
