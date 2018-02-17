@@ -1,7 +1,7 @@
 environments: 
-  - dev:
-      short_name: dev
-      long_name: Development
-      ask_approval: true
-      number_bananas: 6
+  dev:
+    short_name: dev
+    long_name: Development
+    ask_approval: true
+    number_bananas: 6
 
