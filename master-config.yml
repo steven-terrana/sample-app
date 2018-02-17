@@ -1,4 +1,4 @@
-app_environments: 
+environments: 
   - name: dev
     fields: 
       short_name: dev
