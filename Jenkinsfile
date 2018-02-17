@@ -9,8 +9,6 @@ node {
     this.getBinding().setVariable(name, props.asImmutable())
   }
   
-  dev.short_name = "something else"
-  
   println "ENVIRONMENT: ${dev.long_name}"
   println "NUMBER BANANAS: ${dev.number_bananas}"
   
