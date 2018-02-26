@@ -1,3 +1,3 @@
 node {  
-  println "hello from user pipeline"
+  mystep(injected_var)
 }
