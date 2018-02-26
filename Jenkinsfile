@@ -1,3 +1,3 @@
 node {  
-  mystep(injected_var)
+  my_step(injected_var)
 }
