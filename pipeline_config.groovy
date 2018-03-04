@@ -1,3 +1,5 @@
+organization = "organization"
+
 application_environments{
     organization{
         other_val = "something else"
