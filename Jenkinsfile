@@ -1,3 +1,7 @@
 node {  
-  my_step(injected_var)
+  checkout scm
+  
+  tenant = new ConfigSlurper.parse(readFile("pipeline_config.groovy"))
+  println tenant.prettyPrint()
+  
 }
