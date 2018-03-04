@@ -10,5 +10,8 @@ node {
 
 @NonCPS
 def parse_config(){
-  new ConfigSlurper().parse(readFile("pipeline_config.groovy")) 
+  def tenant = new ConfigSlurper().parse(readFile("pipeline_config.groovy")) 
+  println "tenant: "
+  println tenant.prettyPrint()
+  return tenant
 }
