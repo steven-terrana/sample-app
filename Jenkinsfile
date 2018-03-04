@@ -3,7 +3,7 @@ node {
   checkout scm
   
   println "---------------"
-  println "SDP PIPELINE CONFIG: 
+  println "SDP PIPELINE CONFIG: "
   sdp = new SerializableConfigSlurper().parse(libraryResource("sdp/pipeline_config.groovy"))
   println sdp.prettyPrint()
   
