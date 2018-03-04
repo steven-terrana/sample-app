@@ -1,3 +1,4 @@
+import groovy.util.ConfigSlurper
 node {  
   checkout scm
   
