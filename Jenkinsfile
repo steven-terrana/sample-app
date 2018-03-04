@@ -16,17 +16,19 @@ node {
   pipeline_config = tenant + sdp + organization
 
   getProp = { o, p ->
+    if (!p) return
       return p.tokenize('.').inject(o){ obj, prop ->       
           obj[prop]
       }
   }
 
   clearProp = { o , p ->
-      last_token = p.tokenize('.').last()
-      return p.tokenize('.').inject(o){ obj, prop ->
-          if (prop.equals(last_token)) obj[prop] = [:]
-          obj[prop]         
-      }
+    if (!p) return  
+    last_token = p.tokenize('.').last()
+    return p.tokenize('.').inject(o){ obj, prop ->
+        if (prop.equals(last_token)) obj[prop] = [:]
+        obj[prop]         
+    }
   }
 
   organization.flatten().findAll{ it.key.endsWith(".overridable") && it.value.equals(true) }.each{ key, value ->
