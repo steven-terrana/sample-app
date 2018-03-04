@@ -16,9 +16,10 @@ node {
   pipeline_config = tenant + sdp + organization
 
   getProp = { def o,  def p ->
-    println "getProp -> p=${p}"
-    if (!p) return
-      return p.tokenize('.').inject(o){ obj, prop ->       
+    def _p = p
+    println "getProp -> p=${_p}"
+    if (!_p) return
+      return _p.tokenize('.').inject(o){ obj, prop ->       
           obj[prop]
       }
   }
