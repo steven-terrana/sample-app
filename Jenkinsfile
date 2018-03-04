@@ -35,7 +35,7 @@ node {
 
   organization.flatten().findAll{ it.key.endsWith(".overridable") && it.value.equals(true) }.each{ key, value ->
     def k = key - ".overridable"
-    println "checking if should override: ${key}
+    println "checking if should override: ${key}"
       if(getProp(tenant, k)){
           clearProp(pipeline_config, k)
           getProp(pipeline_config, k) << getProp(tenant, k)
