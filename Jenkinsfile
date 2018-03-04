@@ -8,4 +8,7 @@ node {
   println tenant.prettyPrint()
   println tenant.flatten()
   
+  organization = get_organization_configuration()
+  println organization.prettyPrint()
+  
 }
