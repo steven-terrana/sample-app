@@ -32,7 +32,8 @@ node {
   }
 
   organization.flatten().findAll{ it.key.endsWith(".overridable") && it.value.equals(true) }.each{ key, value ->
-      def k = key - ".overridable"
+    def k = key - ".overridable"
+    println "checking if should override: ${key}
       if(getProp(tenant, k)){
           clearProp(pipeline_config, k)
           getProp(pipeline_config, k) << getProp(tenant, k)
@@ -40,23 +41,23 @@ node {
   }
   
   println """
-  -------------------
-  | SDP 
-  -------------------
-  ${sdp.prettyPrint()}
-  -------------------
-  | ORGANIZATION
-  -------------------
-  ${organization.prettyPrint()}
-  -------------------
-  | TENANT
-  -------------------
-  ${tenant.prettyPrint()}
-  -------------------
-  | AGGREGATED CONFIG
-  -------------------
-  ${pipeline_config.prettyPrint()}
-  """
+-------------------
+| SDP 
+-------------------
+${sdp.prettyPrint()}
+-------------------
+| ORGANIZATION
+-------------------
+${organization.prettyPrint()}
+-------------------
+| TENANT
+-------------------
+${tenant.prettyPrint()}
+-------------------
+| AGGREGATED CONFIG
+-------------------
+${pipeline_config.prettyPrint()}
+"""
   
 
   
