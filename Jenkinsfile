@@ -15,17 +15,14 @@ node {
 
   pipeline_config = tenant + sdp + organization
 
-  getProp = { def o,  def p ->
-    def _p = p
-    println "getProp -> p=${_p}"
-    if (!_p) return
-      return _p.tokenize('.').inject(o){ obj, prop ->       
-          obj[prop]
-      }
+  def getProp = { o , p ->
+    if (!p) return
+    return p.tokenize('.').inject(o){ obj, prop ->       
+      obj[prop]
+    }
   }
 
-  clearProp = { def o ,  def p ->
-    println "clearProp -> p=${p}"
+  def clearProp = { o , p ->
     if (!p) return  
     last_token = p.tokenize('.').last()
     return p.tokenize('.').inject(o){ obj, prop ->
@@ -36,11 +33,10 @@ node {
 
   organization.flatten().findAll{ it.key.endsWith(".overridable") && it.value.equals(true) }.each{ key, value ->
     def k = key - ".overridable"
-    println "checking if should override: ${k}"
-      if(getProp(tenant, k)){
-          clearProp(pipeline_config, k)
-          getProp(pipeline_config, k) << getProp(tenant, k)
-      }
+    if(getProp(tenant, k)){
+      clearProp(pipeline_config, k)
+      getProp(pipeline_config, k) << getProp(tenant, k)
+    }
   }
   
   println """
