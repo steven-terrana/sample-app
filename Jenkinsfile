@@ -15,7 +15,7 @@ node {
 
   pipeline_config = tenant + sdp + organization
 
-  getProp = { o, p ->
+  def getProp = { o, p ->
     println "getProp -> p=${p}"
     if (!p) return
       return p.tokenize('.').inject(o){ obj, prop ->       
@@ -23,7 +23,7 @@ node {
       }
   }
 
-  clearProp = { o , p ->
+  def clearProp = { o , p ->
     println "clearProp -> p=${p}"
     if (!p) return  
     last_token = p.tokenize('.').last()
