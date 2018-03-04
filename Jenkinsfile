@@ -10,5 +10,5 @@ node {
 
 @NonCPS
 def parse_config(){
-  new ConfigSlurper().parse(readFile("pipeline_config.groovy")) as HashMap
+  new ConfigSlurper().parse(readFile("pipeline_config.groovy")) 
 }
