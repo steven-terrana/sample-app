@@ -36,7 +36,9 @@ node {
     if(getProp(tenant, k)){
       clearProp(pipeline_config, k)
       // << works
-      getProp(pipeline_config, k).entrySet().each{ it.remove() }.merge(getProp(tenant, k))
+      def replace_with = getProp(tenant, k)
+      if (replace_with.containsKey("conditionalValues")) replace_with.remove("conditionalValues")
+      getProp(pipeline_config, k) << getProp(tenant, k)
     }
   }
   
