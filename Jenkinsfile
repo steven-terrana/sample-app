@@ -35,7 +35,7 @@ node {
     def k = key - ".overridable"
     if(getProp(tenant, k)){
       clearProp(pipeline_config, k)
-      getProp(pipeline_config, k) << getProp(tenant, k)
+      getProp(pipeline_config, k).clear().merge( getProp(tenant, k) )
     }
   }
   
