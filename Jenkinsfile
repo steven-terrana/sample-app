@@ -37,7 +37,7 @@ node {
       clearProp(pipeline_config, k)
       // << works
       def replace_with = getProp(tenant, k)
-      if (replace_with.containsKey("conditionalValues")) replace_with.remove("conditionalValues")
+      if (replace_with.containsKey("conditionValues")) replace_with.remove("conditionValues")
       getProp(pipeline_config, k) << replace_with
     }
   }
