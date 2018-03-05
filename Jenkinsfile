@@ -36,7 +36,7 @@ node {
     if(getProp(tenant, k)){
       clearProp(pipeline_config, k)
       // << works
-      getProp(pipeline_config, k).entrySet()*.remove() + getProp(tenant, k) )
+      getProp(pipeline_config, k).entrySet()*.remove() + getProp(tenant, k) 
     }
   }
   
