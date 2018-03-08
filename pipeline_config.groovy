@@ -1,7 +1,7 @@
 organization = "organization"
 
 use_pipeline_template{
-    name = "frontend"
+    
 }
 
 application_environments{
