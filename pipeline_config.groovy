@@ -3,5 +3,8 @@ libraries{
     docker{ 
         branch = "testing" 
     }
-    tenant_lib
+    tenant_lib{
+        repo = "whatever"
+        field2 = true
+    }
 }
