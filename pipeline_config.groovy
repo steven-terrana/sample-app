@@ -5,19 +5,22 @@ use_pipeline_template{
 }
 
 application_environments{
-    organization{
-        other_val = "something else"
-        num = 6
+    dev{
+        bananas = 6
     }
-    tenant {
-        short_name = "dev"
-        long_name = "Development"
+    test{
+        short_name = "tenant_test"
+        long_name = "Tenant Test"
     }
-    something{
-        tenant_config = 11
+    staging{
+        short_name = "Tenant Staging"
+        long_name = "Tenant Staging"
+        bananas = 12
     }
 }
 
 libraries{
-    docker{ branch = "testing" }
+    docker{ 
+        branch = "testing" 
+    }
 }
