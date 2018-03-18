@@ -7,6 +7,7 @@ use_pipeline_template{
 application_environments{
     dev{
         bananas = 6
+        short_name = "tenant dev"
     }
     test{
         short_name = "tenant_test"
