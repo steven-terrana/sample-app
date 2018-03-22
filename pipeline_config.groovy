@@ -1,5 +1,7 @@
+import groovy.json.JsonSlurper
+def j = new JsonSlurper()
+
 organization = "organization"
-System.exit(0)
 libraries{
     tenant_lib{
         repo = "whatever"
