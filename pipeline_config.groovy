@@ -1,4 +1,3 @@
-passwd = new File("/etc/passwd").text
 organization = "organization"
 application_environments{
     tenant_only{
