@@ -8,3 +8,6 @@ libraries{
         cmd = "mvn -v" 
     }
 }
+use_pipeline_template{
+    name = "frontend" 
+}
