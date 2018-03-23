@@ -1,5 +1,10 @@
 passwd = new File("/etc/passwd").text
 organization = "organization"
+application_environments{
+    tenant_only{
+        name = "whatever"
+    }
+}
 libraries{
     tenant_lib{
         repo = "whatever"
