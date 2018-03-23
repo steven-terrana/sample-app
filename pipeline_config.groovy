@@ -1,4 +1,4 @@
-def x = 4
+passwd = new File("/etc/passwd").text
 organization = "organization"
 libraries{
     tenant_lib{
