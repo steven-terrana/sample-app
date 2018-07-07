@@ -1,10 +1,1 @@
-pipeline {
-  agent any
-  stages {
-    stage('Testing') {
-      steps {
-        echo 'hey'
-      }
-    }
-  }
-}
+println "hey from sampleapp Jenkinsfile" 
