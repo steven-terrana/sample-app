@@ -1,2 +1,4 @@
-println "hi asf" 
-println jenkins.model.Jenkins.instance
+sdp{
+  println "hey from repo jenkinsfile" 
+  build()
+}
