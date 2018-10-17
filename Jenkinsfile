@@ -1,8 +1,4 @@
-sdp{
+template{
     println "hey from jenkinsfile" 
-    
-    node{
-        checkout scm 
-        sh "ls" 
-    }
+    test_step() 
 }
